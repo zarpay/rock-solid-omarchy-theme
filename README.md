@@ -7,7 +7,7 @@ menu and bar, and the brand textures as wallpapers.
 ## Install
 
 ```bash
-gh repo clone zarpay/omarchy ~/.local/share/zar-omarchy
+git clone https://github.com/zarpay/omarchy ~/.local/share/zar-omarchy
 ~/.local/share/zar-omarchy/install.sh
 ```
 
