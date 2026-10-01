@@ -1,4 +1,4 @@
-# ZAR theme for Omarchy
+# Rock Solid — the ZAR theme for Omarchy
 
 The ZAR brand on an [Omarchy](https://omarchy.org) desktop: palette from the
 style guide, concrete 3D icons in the file manager, 2D brand glyphs in the
@@ -7,17 +7,17 @@ menu and bar, and the brand textures as wallpapers.
 ## Install
 
 ```bash
-git clone https://github.com/zarpay/omarchy ~/.local/share/zar-omarchy
-~/.local/share/zar-omarchy/install.sh
+git clone https://github.com/zarpay/rock-solid-omarchy-theme ~/.local/share/rock-solid-omarchy-theme
+~/.local/share/rock-solid-omarchy-theme/install.sh
 ```
 
-Update later with `git -C ~/.local/share/zar-omarchy pull && ~/.local/share/zar-omarchy/install.sh`.
-Remove with `~/.local/share/zar-omarchy/uninstall.sh`.
+Update later with `git -C ~/.local/share/rock-solid-omarchy-theme pull && ~/.local/share/rock-solid-omarchy-theme/install.sh`.
+Remove with `~/.local/share/rock-solid-omarchy-theme/uninstall.sh`.
 
 The theme files at the repo root are a standard Omarchy theme, so
-`omarchy theme install https://github.com/zarpay/omarchy` also works, but it
-only installs colors and backgrounds (and names the theme "omarchy"). Use
-`install.sh` for the whole package.
+`omarchy theme install https://github.com/zarpay/rock-solid-omarchy-theme`
+also works, but it only installs colors and backgrounds (and names the theme
+"rock-solid-omarchy"). Use `install.sh` for the whole package.
 
 ## What gets installed
 
