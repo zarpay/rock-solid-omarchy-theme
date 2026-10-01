@@ -4,6 +4,30 @@ The ZAR brand on an [Omarchy](https://omarchy.org) desktop: palette from the
 style guide, concrete 3D icons in the file manager, 2D brand glyphs in the
 menu and bar, and the brand textures as wallpapers.
 
+## Gallery
+
+![Backgrounds](docs/backgrounds.gif)
+
+**Files** — concrete folders and file types in Nautilus, 2D brand glyphs in the sidebar
+
+![Files](docs/files.png)
+
+**Menu and bar** — every row drawn with the ZAR glyph font; the Zollar replaces the Omarchy mark
+
+![Menu](docs/menus.png)
+
+![Bar](docs/bar.png)
+
+**Palette** — from the ZAR style guide
+
+![Palette](docs/palette.png)
+
+![Terminal](docs/terminal.png)
+
+All five backgrounds: [logo centred](docs/bg-1-zar-logo-center.png) ·
+[logo corner](docs/bg-2-zar-logo-corner.png) · [jasper](docs/bg-3-jasper.png) ·
+[marble](docs/bg-4-marble.png) · [concrete](docs/bg-5-concrete.png)
+
 ## Install
 
 ```bash
