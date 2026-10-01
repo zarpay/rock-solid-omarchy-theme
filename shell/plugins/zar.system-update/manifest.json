@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "zar.system-update",
+  "name": "ZAR system update",
+  "version": "1.0.0",
+  "author": "ZAR",
+  "description": "Indicates available Omarchy updates",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "SystemUpdate.qml"
+  },
+  "barWidget": {
+    "displayName": "ZAR system update",
+    "description": "Indicates available Omarchy updates",
+    "category": "System",
+    "allowMultiple": false
+  },
+  "omarchy": {
+    "clonedFrom": "omarchy.system-update"
+  }
+}

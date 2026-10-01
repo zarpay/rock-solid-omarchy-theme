@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "zar.network",
+  "name": "ZAR network",
+  "version": "1.0.0",
+  "author": "ZAR",
+  "description": "Wi-Fi list and connection state",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "ZAR network",
+    "description": "Wi-Fi list and connection state",
+    "category": "Network",
+    "allowMultiple": false
+  },
+  "omarchy": {
+    "clonedFrom": "omarchy.network"
+  }
+}

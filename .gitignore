@@ -1,0 +1,4 @@
+# Licensed brand typefaces are not redistributed here. Drop EK Modena / Baikal
+# TTFs into fonts/private/ before running install.sh to install them locally.
+fonts/private/
+*.tmp
