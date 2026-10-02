@@ -53,6 +53,17 @@ also works, but it only installs colors and backgrounds (and names the theme
 | Menu | `~/.config/omarchy/extensions/omarchy-menu.jsonc` | Every root, System, Style and Setup row drawn with ZAR glyphs |
 | Bar widgets | `~/.config/omarchy/plugins/zar.*` | Clones of the menu button (Zollar), indicators, update, Tailscale and network widgets with ZAR glyphs; `shell.json` is switched to them |
 
+### Claude Code
+
+The installer switches Claude Code to the shipped theme. Sessions that were
+already open keep their old theme until you run `/theme` once and pick
+**ZAR**; after that, edits to `claude.json` hot-reload. The theme covers
+Claude Code's own chrome (accents, prompt border, status colors, diffs,
+message backgrounds, subagent and rainbow colors). Syntax highlighting inside
+code blocks is not themeable in Claude Code and keeps its built-in colors.
+
+### Fonts
+
 Brand typefaces (EK Modena, Baikal) are licensed and not in this repo. Put
 their TTFs in `fonts/private/` before running `install.sh` and they are
 installed too; Baikal then becomes the GTK interface font.
@@ -68,7 +79,8 @@ installed too; Baikal then becomes the GTK interface font.
 ## Editing
 
 - **Colors**: `colors.toml`, then `omarchy theme set zar`. Omarchy regenerates
-  terminal, editor, btop and shell configs from it.
+  terminal, editor, btop and shell configs from it. `claude.json` is
+  hand-written and does not follow `colors.toml`; update it alongside.
 - **Add a 2D glyph**: drop an SVG in `src/icons-2d/`, run
   `scripts/build-glyph-font.sh`, then reference it from
   `shell/omarchy-menu.jsonc` (codepoints in `src/zar-icons-codepoints.json`).
@@ -81,3 +93,7 @@ installed too; Baikal then becomes the GTK interface font.
 - **Bar widgets**: the clones in `shell/plugins` do not follow Omarchy
   updates. Each manifest records `omarchy.clonedFrom`; re-clone with
   `omarchy plugin clone <id>` and re-apply the glyph edits if upstream changes.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md).
