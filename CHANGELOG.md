@@ -3,6 +3,15 @@
 All notable changes to the Rock Solid theme. Dates are when the change
 landed on `main`.
 
+## 1.1.1 — 2026-10-02
+
+### Fixed
+- App search and the Apps submenu were empty. The bar button had been made
+  by cloning the whole `omarchy.menu` plugin; the clone ran as a third-party
+  menu and the stock menu was disabled, which dropped the application list.
+  Replaced by `zar.menu-button`, a bar-widget-only plugin; the installer now
+  keeps `omarchy.menu` enabled.
+
 ## 1.1.0 — 2026-10-02
 
 ### Added

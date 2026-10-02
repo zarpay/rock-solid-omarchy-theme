@@ -51,7 +51,7 @@ also works, but it only installs colors and backgrounds (and names the theme
 | Icon theme | `~/.local/share/icons/ZAR` | Concrete folders and file types for Nautilus; 2D brand glyphs as symbolic icons for sidebars and toolbars; inherits Yaru-yellow for the rest |
 | Glyph font | `~/.local/share/fonts/zar/ZARIcons.ttf` | The 2D icon set compiled to a font (U+E400…), the way Nerd Fonts work |
 | Menu | `~/.config/omarchy/extensions/omarchy-menu.jsonc` | Every root, System, Style and Setup row drawn with ZAR glyphs |
-| Bar widgets | `~/.config/omarchy/plugins/zar.*` | Clones of the menu button (Zollar), indicators, update, Tailscale and network widgets with ZAR glyphs; `shell.json` is switched to them |
+| Bar widgets | `~/.config/omarchy/plugins/zar.*` | A Zollar menu button, plus clones of the indicators, update, Tailscale and network widgets with ZAR glyphs; `shell.json` is switched to them. The stock menu itself stays enabled |
 
 ### Claude Code
 
@@ -91,7 +91,9 @@ installed too; Baikal then becomes the GTK interface font.
   the stock row (`/usr/share/omarchy/default/omarchy/omarchy-menu.jsonc`); an
   override replaces every field.
 - **Bar widgets**: the clones in `shell/plugins` do not follow Omarchy
-  updates. Each manifest records `omarchy.clonedFrom`; re-clone with
+  updates. Do not clone `omarchy.menu` to restyle the button: a cloned menu
+  runs as a third-party plugin and loses the app list. `zar.menu-button` is
+  a bar-widget-only plugin for that reason. Each manifest records `omarchy.clonedFrom`; re-clone with
   `omarchy plugin clone <id>` and re-apply the glyph edits if upstream changes.
 
 ## Changelog

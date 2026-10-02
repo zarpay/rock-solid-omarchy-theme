@@ -68,10 +68,13 @@ if [[ -f $SHELL_JSON ]]; then
     done
   done
   cp "$SHELL_JSON" "$SHELL_JSON.bak.$STAMP"
+  # The stock menu plugin must stay enabled: the ZAR bar button only opens it,
+  # and `omarchy plugin clone omarchy.menu` leaves it in disabledPlugins.
   jq --argjson map "$map" '
     if (.bar.layout|type)=="object" then
       .bar.layout |= with_entries(.value |= map(if (.id? and $map[.id]) then .id = $map[.id] else . end))
-    else . end' "$SHELL_JSON.bak.$STAMP" > "$SHELL_JSON"
+    else . end
+    | if (.disabledPlugins|type)=="array" then .disabledPlugins |= map(select(. != "omarchy.menu")) else . end' "$SHELL_JSON.bak.$STAMP" > "$SHELL_JSON"
 fi
 
 # Interface font: Baikal if it is installed (fonts/private or system-wide).

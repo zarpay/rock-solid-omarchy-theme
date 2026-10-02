@@ -1,22 +1,19 @@
 {
   "schemaVersion": 1,
-  "id": "zar.menu",
-  "name": "ZAR menu",
+  "id": "zar.menu-button",
+  "name": "ZAR menu button",
   "version": "1.0.0",
   "author": "ZAR",
-  "description": "Quickshell-powered Omarchy command menu",
+  "description": "Bar button that opens the Omarchy menu, drawn with the Zollar glyph",
   "kinds": [
-    "menu",
     "bar-widget"
   ],
-  "keepLoaded": true,
   "entryPoints": {
-    "menu": "Menu.qml",
     "barWidget": "BarWidget.qml"
   },
   "barWidget": {
-    "displayName": "ZAR menu",
-    "description": "Launches the Omarchy menu",
+    "displayName": "ZAR menu button",
+    "description": "Opens the Omarchy menu",
     "category": "Compositor",
     "allowMultiple": false
   },
