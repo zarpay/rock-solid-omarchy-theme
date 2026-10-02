@@ -47,7 +47,7 @@ also works, but it only installs colors and backgrounds (and names the theme
 
 | Piece | Where | What it does |
 |---|---|---|
-| Theme | `~/.config/omarchy/themes/zar` | `colors.toml` (Gold accent, Quartz magenta, Tanzanite/Serpentine/Limestone from the style guide), 5 backgrounds, lock-screen logo |
+| Theme | `~/.config/omarchy/themes/zar` | `colors.toml` (Gold accent, Quartz magenta, Tanzanite/Serpentine/Limestone from the style guide), 5 backgrounds, lock-screen logo, `claude.json` (Claude Code theme, activated by the installer) |
 | Icon theme | `~/.local/share/icons/ZAR` | Concrete folders and file types for Nautilus; 2D brand glyphs as symbolic icons for sidebars and toolbars; inherits Yaru-yellow for the rest |
 | Glyph font | `~/.local/share/fonts/zar/ZARIcons.ttf` | The 2D icon set compiled to a font (U+E400…), the way Nerd Fonts work |
 | Menu | `~/.config/omarchy/extensions/omarchy-menu.jsonc` | Every root, System, Style and Setup row drawn with ZAR glyphs |

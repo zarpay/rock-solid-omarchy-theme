@@ -20,7 +20,7 @@ need rsync; need jq; need omarchy-theme-set; need fc-cache
 say "Theme → $THEME_DIR"
 mkdir -p "$THEME_DIR"
 rsync -a --delete --exclude .git "$ROOT/backgrounds/" "$THEME_DIR/backgrounds/"
-cp "$ROOT"/colors.toml "$ROOT"/icons.theme "$ROOT"/unlock.png "$ROOT"/preview.png "$ROOT"/preview-unlock.png "$THEME_DIR/"
+cp "$ROOT"/colors.toml "$ROOT"/icons.theme "$ROOT"/claude.json "$ROOT"/unlock.png "$ROOT"/preview.png "$ROOT"/preview-unlock.png "$THEME_DIR/"
 mkdir -p "$THEME_DIR/src"
 rsync -a --delete "$ROOT/src/" "$THEME_DIR/src/"
 
