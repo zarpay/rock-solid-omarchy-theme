@@ -86,6 +86,9 @@ fi
 
 say "Applying theme"
 omarchy-theme-set "$SLUG"
+# Omarchy generates a Claude Code theme from colors.toml but only switches
+# Claude Code to it on request.
+command -v omarchy-theme-set-claude >/dev/null && omarchy-theme-set-claude --activate 2>/dev/null || true
 omarchy-restart-shell >/dev/null 2>&1 || omarchy restart shell >/dev/null 2>&1 || true
 
 say "Done. Theme: $SLUG · icons: ZAR · glyph font: ZARIcons"
