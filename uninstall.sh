@@ -10,7 +10,7 @@ if [[ -f $SHELL_JSON ]]; then
   map='{}'
   for m in "$PLUGIN_DIR"/zar.*/manifest.json; do
     [[ -f $m ]] || continue
-    map=$(jq -c --arg k "$(jq -r .id "$m")" --arg v "$(jq -r '.omarchy.clonedFrom // empty' "$m")" '. + {($k):$v}' <<<"$map")
+    map=$(jq -c --arg k "$(jq -r .id "$m")" --arg v "$(jq -r '.zar.replaces // .omarchy.clonedFrom // empty' "$m")" '. + {($k):$v}' <<<"$map")
   done
   tmp=$(mktemp)
   jq --argjson map "$map" '

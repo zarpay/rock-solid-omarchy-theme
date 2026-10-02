@@ -52,18 +52,21 @@ for src in "$ROOT"/shell/plugins/zar.*; do
 done
 
 # Point the bar layout at the ZAR widgets. Each zar.* plugin records which
-# stock plugin it replaces; any widget using that stock id (or another clone
-# of it) is switched over.
+# stock widget it replaces (zar.replaces, or omarchy.clonedFrom for clones);
+# any widget using that stock id (or another clone of it) is switched over.
+# zar.menu-button deliberately does NOT use omarchy.clonedFrom: the shell
+# redirects every call addressed to omarchy.menu to an enabled plugin cloned
+# from it, which would leave the menu itself unreachable.
 if [[ -f $SHELL_JSON ]]; then
   say "Bar layout → $SHELL_JSON"
   map='{}'
   for m in "$ROOT"/shell/plugins/zar.*/manifest.json; do
-    ours=$(jq -r .id "$m"); from=$(jq -r '.omarchy.clonedFrom // empty' "$m")
+    ours=$(jq -r .id "$m"); from=$(jq -r '.zar.replaces // .omarchy.clonedFrom // empty' "$m")
     [[ -n $from ]] || continue
     map=$(jq -c --arg k "$from" --arg v "$ours" '. + {($k):$v}' <<<"$map")
     for other in "$PLUGIN_DIR"/*/manifest.json; do
       oid=$(jq -r .id "$other" 2>/dev/null || true)
-      [[ -n $oid && $oid != "$ours" && $(jq -r '.omarchy.clonedFrom // empty' "$other") == "$from" ]] \
+      [[ -n $oid && $oid != "$ours" && $(jq -r '.zar.replaces // .omarchy.clonedFrom // empty' "$other") == "$from" ]] \
         && map=$(jq -c --arg k "$oid" --arg v "$ours" '. + {($k):$v}' <<<"$map")
     done
   done

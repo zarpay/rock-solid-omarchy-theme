@@ -92,8 +92,10 @@ installed too; Baikal then becomes the GTK interface font.
   override replaces every field.
 - **Bar widgets**: the clones in `shell/plugins` do not follow Omarchy
   updates. Do not clone `omarchy.menu` to restyle the button: a cloned menu
-  runs as a third-party plugin and loses the app list. `zar.menu-button` is
-  a bar-widget-only plugin for that reason. Each manifest records `omarchy.clonedFrom`; re-clone with
+  runs as a third-party plugin and loses the app list, and the shell routes
+  every `omarchy menu` call to whichever enabled plugin claims
+  `omarchy.clonedFrom: omarchy.menu`. `zar.menu-button` is a bar-widget-only
+  plugin that records what it replaces under `zar.replaces` instead. Each manifest records `omarchy.clonedFrom`; re-clone with
   `omarchy plugin clone <id>` and re-apply the glyph edits if upstream changes.
 
 ## Changelog

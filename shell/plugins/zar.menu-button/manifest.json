@@ -17,7 +17,7 @@
     "category": "Compositor",
     "allowMultiple": false
   },
-  "omarchy": {
-    "clonedFrom": "omarchy.menu"
+  "zar": {
+    "replaces": "omarchy.menu"
   }
 }

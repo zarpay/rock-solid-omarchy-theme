@@ -9,8 +9,9 @@ landed on `main`.
 - App search and the Apps submenu were empty. The bar button had been made
   by cloning the whole `omarchy.menu` plugin; the clone ran as a third-party
   menu and the stock menu was disabled, which dropped the application list.
-  Replaced by `zar.menu-button`, a bar-widget-only plugin; the installer now
-  keeps `omarchy.menu` enabled.
+  Replaced by `zar.menu-button`, a bar-widget-only plugin that does not claim
+  `omarchy.clonedFrom` (the shell redirects `omarchy menu` calls to such
+  clones); the installer now keeps `omarchy.menu` enabled.
 
 ## 1.1.0 — 2026-10-02
 
